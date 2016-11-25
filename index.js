@@ -13,7 +13,16 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 app.get('/db', function(request, response) {
+    var results = [
+        { id: '1', name: 'Michelle'},
+        { id: '2', name: 'Amy'},
+        { id: '3', name: 'Kim'},
+        { id: '4', name: 'Mary'},
+        { id: '5', name: 'Sunny'},
+    ];
+    response.render('results',results );
     response.render('pages/db');
+
 });
 
 app.listen(app.get('port'), function() {
