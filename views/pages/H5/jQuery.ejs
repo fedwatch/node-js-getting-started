@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery 面试必备 - StartBit</title>
+    <% include ../../header.ejs %>
+</head>
+<body>
+<% include ../../nav.ejs %>
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="/public/img/icon.ico">
+        </a>
+        <h1>中国第一个提出“前端价值面试”的招聘标准的专业互金团队</h1>
+        <p>
+            &check;已服务300家互联网团队
+
+            &check;已帮助提升600位非前端行业人员成功转行
+        </p>
+        <p>
+            &check;“不成功不收费”前端招聘外包新起点
+
+            &check; 好评如潮
+        </p>
+
+        <a type="button" class="btn btn-lg btn-default" href="/"><span class="glyphicon glyphicon-flash"></span> Getting
+            Started with Node</a>
+        <a type="button" class="btn btn-lg btn-primary" href=""><span class="glyphicon glyphicon-download"></span>
+            Source on GitHub</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-check"></span> jQuery 面试必备</h3>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q1">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#a1" aria-expanded="true" aria-controls="a1">
+                                彻底将jQuery变量还原，可以使用什么方法实现
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="q1">
+                        <div class="panel-body">
+                            jquery的多库共存 ($.noConflict(extreme))
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a2" aria-expanded="false" aria-controls="a2">
+                                jquery中想要找到所有元素的同辈元素
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q2">
+                        <div class="panel-body">
+                            siblings([expr])
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q3">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a3" aria-expanded="false" aria-controls="a3">
+                                jQuery的美元符号$有什么作用？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q3">
+                        <div class="panel-body">
+                            其实美元符号$只是”jQuery”的别名，它是jQuery的选择器
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q4">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a4" aria-expanded="false" aria-controls="a4">
+                                body中的onload()函数和jQuery中的document.ready()有什么区别？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q4">
+                        <div class="panel-body">
+                            回答：onload()和document.ready()的区别有以下两点：
+
+                            1、我们可以在页面中使用多个document.ready()，但只能使用一次onload()。
+
+                            2、document.ready()函数在页面DOM元素加载完以后就会被调用，而onload()函数则要在所有的关联资源（包括图像、音频）加载完毕后才会调用。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q5">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a5" aria-expanded="false" aria-controls="a5">
+                                jQuery中有哪几种类型的选择器？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q5">
+                        <div class="panel-body">
+                            1、基本选择器：直接根据id、css类名、元素名返回匹配的dom元素。
+
+                            2、层次选择器：也叫做路径选择器，可以根据路径层次来选择相应的DOM元素。
+
+                            3、过滤选择器：在前面的基础上过滤相关条件，得到匹配的dom元素。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a6" aria-expanded="false" aria-controls="a6">
+                                请使用jQuery将页面上的所有元素边框设置为2px宽的虚线？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q6">
+                        <div class="panel-body">
+                            <pre>$("*").css("border", "2px dotted red");</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a7" aria-expanded="false" aria-controls="a7">
+                                当CDN上的jQuery文件不可用时，该怎么办？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q7">
+                        <div class="panel-body">
+                            为了节省带宽和脚本引用的稳定性，我们会使用CDN上的jQuery文件，例如google的jquery cdn服务。但是如果这些CDN上的jQuery服务不可用，我们还可以通过以下代码来切换到本地服务器的jQuery版本
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q8">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a8" aria-expanded="false" aria-controls="a8">
+                                jQuery中的Delegate()函数有什么作用
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q8">
+                        <div class="panel-body">
+                            1、如果你有一个父元素，需要给其下的子元素添加事件，这时你可以使用delegate()了
+                            2、当元素在当前页面中不可用时，可以使用delegate()
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q9">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a9" aria-expanded="false" aria-controls="a9">
+                                jQuery编码和解码URL
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q9">
+                        <div class="panel-body">
+                            在jQuery中，我们可以使用以下方法实现URL的编码和解码。encodeURIComponent(url) and decodeURIComponent(url)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q10">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a10" aria-expanded="false" aria-controls="a10">
+                                jQuery禁用浏览器的前进后退按钮
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q10">
+                        <div class="panel-body">
+                            window.history.forward(1);
+                            //OR
+                            window.history.forward(-1);
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q11">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a11" aria-expanded="false" aria-controls="a11">
+                                jQuery 里的 ID 选择器和 class 选择器有何不同？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q11">
+                        <div class="panel-body">
+                            ID 选择器使用 ID 来选择元素，比如 #element1，而 class 选择器使用 CSS class 来选择元素。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q12">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a12" aria-expanded="false" aria-controls="a12">
+                                jQuery中 detach() 和 remove() 方法的区别是什么
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q12">
+                        <div class="panel-body">
+                            尽管 detach() 和 remove() 方法都被用来移除一个DOM元素, 两者之间的主要不同在于 detach() 会保持对过去被解除元素的跟踪, 因此它可以被取消解除, 而 remove() 方法则会保持过去被移除对象的引用. 你也还可以看看 用来向DOM中添加元素的 appendTo() 方法.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q13">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a13" aria-expanded="false" aria-controls="a13">
+                                jQuery.get() 和 jQuery.ajax() 方法之间的区别是什么?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q13">
+                        <div class="panel-body">
+                            ajax() 方法更强大，更具可配置性, 让你可以指定等待多久，以及如何处理错误。get() 方法是一个只获取一些数据的专门化方法。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q14">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a14" aria-expanded="false" aria-controls="a14">
+                                jQuery 中的方法链是什么？使用方法链有什么好处？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q14">
+                        <div class="panel-body">
+                            方法链是对一个方法返回的结果调用另一个方法，这使得代码简洁明了，同时由于只对 DOM 进行了一轮查找，性能方面更加出色。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q15">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a15" aria-expanded="false" aria-controls="a15">
+                                jQuery 事件处理程序里返回了 false 会怎样？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q15">
+                        <div class="panel-body">
+                            这通常用于阻止事件向上冒泡。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q16">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a16" aria-expanded="false" aria-controls="a16">
+                                jQuery 里的 each() 是什么函数？你是如何使用它的？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q16">
+                        <div class="panel-body">
+                            each() 函数就像是 Java 里的一个 Iterator，它允许你遍历一个元素集合。你可以传一个函数给 each() 方法，被调用的 jQuery 对象会在其每个元素上执行传入的函数。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q17">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a17" aria-expanded="false" aria-controls="a17">
+                                jQuery中 attr和prop的区别　
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q17">
+                        <div class="panel-body">
+                            attr是操作属性节点，DOM的API setAttribute，getAttribute（HTML）
+
+                            prop是操作获取到的对应js对象的属性 （JS）
+
+                            场景：遇到要获取或设置checked,selected,readonly和disabled等属性时，用prop方法显然更好
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q18">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a18" aria-expanded="false" aria-controls="a18">
+                                jQuery中 <code>delegate()</code> 和 <code>live()</code> 的区别
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q18">
+                        <div class="panel-body">
+                            <p><code>delegate()</code> 指定了委托对象。</p>
+                            <p><code>live()</code> 委托给了jQuery的 <kbd>context</kbd> ，<b>jquery-1.9</b> 以后删除了，用 <code>on()</code>代替。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q19">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a19" aria-expanded="false" aria-controls="a19">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q19">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q20">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a20" aria-expanded="false" aria-controls="a20">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q20">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q21">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a21" aria-expanded="false" aria-controls="a21">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q21">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q22">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a22" aria-expanded="false" aria-controls="a22">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q22">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q23">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a23" aria-expanded="false" aria-controls="a23">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q23">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q24">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a24" aria-expanded="false" aria-controls="a24">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q24">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q25">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a25" aria-expanded="false" aria-controls="a25">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q25">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q26">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a26" aria-expanded="false" aria-controls="a26">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q26">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q27">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a27" aria-expanded="false" aria-controls="a27">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q27">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+        </div>
+    </div> <!-- row -->
+</div>
+
+
+</body>
+</html>

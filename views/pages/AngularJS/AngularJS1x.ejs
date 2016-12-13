@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS1 面试必备 - StartBit</title>
+    <% include ../../header.ejs %>
+</head>
+<body>
+<% include ../../nav.ejs %>
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="/public/img/angular.png">
+        </a>
+        <h1>AngularJS 面试必备</h1>
+        <span>
+            AngularJS1 最新版本为 1.5.8
+        </span>
+        <p>
+            AngularJS 诞生于2009年，由<code>Misko Hevery</code>等人创建，后为 <code>Google</code> 所收购，一款优秀的 <code>MVVM</code> 框架，已经被用于Google的多款产品当中。
+        </p>
+        <p>
+            AngularJS有着诸多特性，最为核心的是：MVC、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。
+        </p>
+        <% include ../AngularJS/star.ejs %>
+
+        <a type="button" class="btn btn-lg btn-default" href="https://angularjs.org/">
+            <span class="glyphicon glyphicon-flash"></span>
+            AngularJS 官网
+        </a>
+        <a type="button" class="btn btn-lg btn-default" href="https://docs.angularjs.org/guide">
+            <span class="glyphicon glyphicon-download"></span>
+            Angular API 文档
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-check"></span> AngularJS面试必备</h3>
+            <div style="margin-top:5%;">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q1">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#a1" aria-expanded="true" aria-controls="a1">
+                                  AngularJS 中 ng-show/ng-hide 与 ng-if的区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="q1">
+                            <div class="panel-body">
+                                <p>ng-show/ng-hide:通过display来进行隐藏和显示的。</p>
+                                <p>ng-if实际上控制DOM节点的增删除来实现的。</p>
+                                <p>因此如果我们是根据不同的条件来进行dom节点的加载的话，那么ng-if的性能好过ng-show.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q2">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a2" aria-expanded="false" aria-controls="a2">
+                                    解释下什么是$rootScrope以及和$scope的区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q2">
+                            <div class="panel-body">
+                                <img src="http://files.jb51.net/file_images/article/201608/2016826110341589.png?201672611352" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q3">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a3" aria-expanded="false" aria-controls="a3">
+                                    Angular中的 表达式 <code>{{yourModel}}</code> 是如何工作的
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q3">
+                            <div class="panel-body">
+                                <p>它依赖于 $interpolation服务，在初始化页面html后，它会找到这些表达式，并且进行标记，于是每遇见一个{{}}，则会设置一个$watch。而$interpolation会返回一个带有上下文参数的函数，最后该函数执行，则算是表达式$parse到那个作用域上。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q4">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a4" aria-expanded="false" aria-controls="a4">
+                                    Angular中的digest周期是什么
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q4">
+                            <div class="panel-body">
+                                <p>每个digest周期中，angular总会对比scope上model的值，一般digest周期都是自动触发的，我们也可以使用$apply进行手动触发。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q5">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a5" aria-expanded="false" aria-controls="a5">
+                                    Angular中如何取消 $timeout, 以及停止一个$watch()
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q5">
+                            <div class="panel-body">
+                                <p>取消 $timeout:使用cancel()</p>
+                                <p>停止 $watch:$watch() 会返回一个停止注册的函数</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q6">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a6" aria-expanded="false" aria-controls="a6">
+                                    Angular Directive中 <code>restrict</code> 中分别可以怎样设置？scope中 <code>@,=,&</code>有什么区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q6">
+                            <div class="panel-body">
+                                <p> restrict中用 <b>A 匹配 属性</b>、<b>E 匹配 标签</b>、<b>C 匹配 类</b>、<b>M 匹配 注释</b>，并且使用多个值进行多匹配</p>
+                                <p> 在scope中，<code>@,=,&</code>表示 值绑定。</p>
+                                <p><code>@</code>表示获取一个设置的字符串，它可以自己设置的也可以使用<code>{{yourModel}}</code>进行绑定</p>
+                                <p><code>=</code>表示双向绑定，绑定scope上的一些属性</p>
+                                <p><code>&</code>表示用于执行父级scope上的一些表达式，常见我们设置一些需要执行的函数</p>
+                                <div class="content" style="min-height:100px;content:'代码加载中';">
+                                    <script async src="//jsfiddle.net/mmru709p/embed/"></script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q7">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a7" aria-expanded="false" aria-controls="a7">
+                                    列出AngularJS中至少三种实现不同模块之间通信方式
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q7">
+                            <div class="panel-body">
+                                <p>1）作用域继承。利用子 Controller 控制父 Controller 上的数据。（父 Controller 中的数据要为引用类型，不能是基本类型，原因参见 AngularJS中的作用域 一文）</p>
+                                <p>2）注入服务。把需要共享的数据注册为一个 service，在需要的 Controller 中注入。</p>
+                                <p>3）基于事件。利用 Angular 的事件机制，使用 $on、$emit 和 $boardcast</p>
+                                <p>其中，作用域继承仅限于上下级之间的通信，注入服务和基于事件的机制可以实现任意级别的 Controller 通信。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q8">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a8" aria-expanded="false" aria-controls="a8">
+                                    有哪些措施可以改善 Angular 性能
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q8">
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q9">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a9" aria-expanded="false" aria-controls="a9">
+                                    你认为在Angular中使用jQuery好么
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q9">
+                            <div class="panel-body">
+                                不建议使用。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q10">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a10" aria-expanded="false" aria-controls="a10">
+                                    如何进行angular的单元测试
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q10">
+                            <div class="panel-body">
+                                <p>我们可以使用 <code>KarmaJS 和 Jasmine</code> 进行单元测试,我们通过ngMock引入Angular App然后自行添加我们的测试用例。</p>
+                   <pre>describe('calculator', function () {
+    beforeEach(module('calculatorApp'));
+    var $controller;
+    beforeEach(inject(function (_$controller_) {
+        $controller = _$controller_;
+    }));
+    describe('sum', function () {
+        it('1 + 1 should equal 2', function () {
+            var $scope = {};
+            var controller = $controller('CalculatorController', {$scope: $scope});
+            $scope.x = 1;
+            $scope.y = 2;
+            $scope.sum();
+            expect($scope.z).toBe(3);
+        });
+    });
+});</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q11">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a11" aria-expanded="false" aria-controls="a11">
+                                    Angular的数据绑定采用什么机制及其详述原理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q11">
+                            <div class="panel-body">
+                                <p>脏检查机制。</p>
+                                <p><b>原理：</b>Angular 在 scope 模型上设置了一个 监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 AngularJS 就会往 $watch 队列里插入一条 $watch ，用来检测它监视的 model 里是否有变化的东西。当浏览器接收到可以被 angular context 处理的事件时， $digest 循环就会触发，遍历所有的 $watch ，最后更新 DOM。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q12">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a12" aria-expanded="false" aria-controls="a12">
+                                    Angular的 依赖注入(DI) 采用什么机制及其详述原理
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q12">
+                            <div class="panel-body">
+                                <p>依赖注入是一种软件设计模式，目的是处理代码之间的依赖关系，减少组件间的耦合。这减轻一个组成部分，从定位的依赖，依赖配置。这有助于使组件可重用，维护和测试。</p>
+                                <p><b>AngularJS原理</b> AngularJS 是通过构造函数的参数名字来推断依赖服务名称的，通过 toString() 来找到这个定义的 function 对应的字符串，然后用正则解析出其中的参数（依赖项），再去依赖映射中取到对应的依赖，实例化之后传入。</p>
+                                <p>提供了一个至高无上的依赖注入机制。它提供了一个可注入彼此依赖下列核心组件。</p>
+                                <ul>
+                                    <li>值 (value)</li>
+                                    <li>工厂 (factory)</li>
+                                    <li>服务 (service)</li>
+                                    <li>提供者 (provider)</li>
+                                    <li>常值 (constant)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q13">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a13" aria-expanded="false" aria-controls="a13">
+                                    AngularJS的 <code>compile</code> 和 <code>link</code> 的区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q13">
+                            <div class="panel-body">
+                                <ul class="nav ">
+                                    <li><code>compile</code> 函数的作用是对指令的模版进行转换</li>
+                                    <li><code>link</code>的作用是在模型和视图之间建立关联，包括在元素上注册事件监听</li>
+                                    <li><code>scope</code> 在链接阶段才会被绑定到元素上，因此<code>compile</code>阶段操作<code>scope</code>会报错</li>
+                                    <li>同一个指令的多个实例，<code>compile</code> 只会执行一次；<code>link</code>对于指令的每个实例都会执行</li>
+                                    <li>一般情况下我们只要编写 <code>link</code>函数就能满足业务需求</li>
+                                    <li>自定义compile函数应该返回一个link函数做后续处理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q14">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a14" aria-expanded="false" aria-controls="a14">
+                                    AngularJS的 <code>$apply()</code> 和 <code>$digest()</code> 的区别
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q14">
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q15">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a15" aria-expanded="false" aria-controls="a15">
+                                    AngularJS的 ng-repeat迭代数组的时候，如何解决数组中有相同值问题
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q15">
+                            <div class="panel-body">
+                                <p>
+                                    console中显示会提示 Duplicates in a repeater are not allowed. 加 track by $index 可解决。当然，也可以 trace by 任何一个普通的值，只要能唯一性标识数组中的每一项即可（建立 dom 和数据之间的关联）。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q16">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a16" aria-expanded="false" aria-controls="a16">
+                                    AngularJS的 ng-click 中写的表达式，能使用 JS 原生对象上的方法吗
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q16">
+                            <div class="panel-body">
+                                <p>
+                                    不止是 ng-click 中的表达式，只要是在页面中，都不能直接调用原生的 JS 方法，因为这些 <code>$scope</code> 中并不存在于与页面对应的Controller。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q17">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a17" aria-expanded="false" aria-controls="a17">
+                                    AngularJS的 <code>{{now | 'yyyy-MM-dd'}}</code> 这种表达式里面，竖线和后面的参数通过什么方式可以自定义
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q17">
+                            <div class="panel-body">
+                                <p>自定义filter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q18">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a18" aria-expanded="false" aria-controls="a18">
+                                    AngularJS的 内置 filter 有几种并简要罗列下
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q18">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>date（日期）</li>
+                                    <li>currency（货币）</li>
+                                    <li>limitTo（限制数组或字符串长度）</li>
+                                    <li>orderBy（排序）</li>
+                                    <li>lowercase（小写）</li>
+                                    <li>uppercase（大写）</li>
+                                    <li>number（格式化数字，加上千位分隔符，并接收参数限定小数点位数）</li>
+                                    <li>filter（处理一个数组，过滤出含有某个子串的元素）</li>
+                                    <li>json（格式化 json 对象）</li>
+                                </ul>
+                                <p>使用方法:</p>
+                                <p>1、直接写在页面里面</p>
+                                <p>
+                                    <code>{{now | date : 'yyyy-MM-dd'}}</code>
+                                </p>
+                                <p>2、直接写在js里面,以 $filter('过滤器名称')(需要过滤的对象, 参数1, 参数2,...) 方式</p>
+                                <p>
+                                    <code>
+                                        $filter('date')(now, 'yyyy-MM-dd hh:mm:ss');
+                                    </code>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q19">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a19" aria-expanded="false" aria-controls="a19">
+                                    AngularJS的 自定义 filter 如何实现
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q19">
+                            <div class="panel-body">
+                    <pre>// 形式
+app.filter('过滤器名称',function(){
+    return function(需要过滤的对象,过滤器参数1,过滤器参数2,...){
+        //...做一些事情
+        return 处理后的对象;
+    }
+});  </pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q20">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a20" aria-expanded="false" aria-controls="a20">
+                                    AngularJS的 <code>factory</code>、<code>service</code> 和 <code>provider</code> 是什么关系
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q20">
+                            <div class="panel-body">
+                                <p>
+                                    <code>factory</code>:
+                                    把 service 的方法和数据放在一个对象里，并返回这个对象
+                                </p>
+                <pre>app.factory('FooService', function(){
+    return {
+        target: 'factory',
+        sayHello: function(){
+            return 'hello ' + this.target;
+        }
+    }
+});</pre>
+                                <p>
+                                    <code>service</code>:
+                                    通过构造函数方式创建 service，返回一个实例化对象
+                                </p>
+                <pre>app.service('FooService', function(){
+    var self = this;
+    this.target = 'service';
+    this.sayHello = function(){
+        return 'hello ' + self.target;
+    }
+});</pre>
+                                <p>
+                                    <code>provider</code>:
+                                    创建一个可通过 config 配置的 service，$get 中返回的，就是用 factory 创建 service 的内容
+                                </p>
+                <pre>app.provider('FooService', function(){
+    this.configData = 'init data';
+    this.setConfigData = function(data){
+        if(data){
+            this.configData = data;
+        }
+    }
+    this.$get = function(){
+        var self = this;
+        return {
+            target: 'provider',
+            sayHello: function(){
+                return self.configData + ' hello ' + this.target;
+            }
+        }
+    }
+});
+
+// 此处注入的是 FooService 的 provider
+app.config(function(FooServiceProvider){
+    FooServiceProvider.setConfigData('config data');
+});</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q21">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a21" aria-expanded="false" aria-controls="a21">
+                                    AngularJS的 Controller 之间的通信
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q21">
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q22">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a22" aria-expanded="false" aria-controls="a22">
+                                    AngularJS的 应用如何良好地结构分层
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q22">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>
+                                            <b>按照 文件类型 组织</b>
+                                        </p>
+                    <pre>
+                        css
+                            index
+                        js
+                            controllers
+                            models
+                            services
+                            filters
+                        templates
+                            account1
+                            disk1
+                            account2
+                            disk2
+                            account3
+                            disk3
+                    </pre>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            <b>按照 业务模块 组织</b>
+                                        </p>
+                    <pre>
+                        css
+                        modules
+                          account
+                            controllers
+                            models
+                            services
+                            filters
+                            templates
+                          disk
+                            controllers
+                            models
+                            services
+                            filters
+                            templates
+                    </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q23">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a23" aria-expanded="false" aria-controls="a23">
+                                    AngularJS的 逻辑代码的拆分
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q23">
+                            <div class="panel-body">
+                                <p>作为一个 MVVM 框架，Angular 应用本身就应该按照 模型，视图模型（控制器），视图来划分。</p>
+                                <p>这里逻辑代码的拆分，主要是指尽量让 controller 这一层很薄。提取共用的逻辑到 service 中 （比如后台数据的请求，数据的共享和缓存，基于事件的模块间通信等），提取共用的界面操作到 directive 中（比如将日期选择、分页等封装成组件等），提取共用的格式化操作到 filter 中等等。</p>
+                                <p>在复杂的应用中，也可以为实体建立对应的构造函数，比如硬盘（Disk）模块，可能有列表、新建、详情这样几个视图，并分别对应的有 controller，那么可以建一个 Disk 构造函数，里面完成数据的增删改查和验证操作，有跟 Disk 相关的 controller，就注入 Disk 构造器并生成一个实例，这个实例就具备了增删改查和验证方法。这样既层次分明，又实现了复用（让 controller 层更薄了）。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q24">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a24" aria-expanded="false" aria-controls="a24">
+                                    AngularJS的 应用常用哪些路由库，各自的区别是什么
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q24">
+                            <div class="panel-body">
+                                <p>Angular1.x 中常用 ngRoute 和 ui.router，还有一种为 Angular2 设计的 new router （面向组件）。后面那个没在实际项目中用过，就不讲了。</p>
+                                <p>无论是 ngRoute 还是 ui.router，作为框架额外的附加功能，都必须以 模块依赖 的形式被引入。</p>
+                                <b>区别</b>
+                                <p>ngRoute 模块是 Angular 自带的路由模块，而 ui.router 模块是基于 ngRoute模块开发的第三方模块。</p>
+                                <p>ui.router 是基于 state （状态）的， ngRoute 是基于 url 的，ui.router模块具有更强大的功能，主要体现在视图的嵌套方面。</p>
+                                <p>使用 ui.router 能够定义有明确父子关系的路由，并通过 ui-view 指令将子路由模版插入到父路由模板的
+                                    <code>
+                                        &lt;div ui-view&gt;&lt;/div&gt;
+                                    </code>
+                                    中去，从而实现视图嵌套。而在 ngRoute 中不能这样定义，如果同时在父子视图中 使用了
+                                    <code>
+                                        &lt;div ng-view&gt;&lt;/div&gt;
+                                    </code>
+                                    会陷入死循环。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q25">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a25" aria-expanded="false" aria-controls="a25">
+                                    Chrome 下 开发和调试 AngularJS 应用有什么插件
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q25">
+                            <div class="panel-body">
+                                <p>Batarang 是用于开发和调试 AngularJS 应用的一个优秀的chrome浏览器插件。</p>
+                                <p>Batarang 提供了模型浏览，可以查看Angular内部哪些模型已经绑定到作用域（scopes ）。可以用于需要在运行时查看指令中的隔离作用域（isolate scopes）绑定的值。</p>
+                                <p>Batarang 还提供了依赖关系图。 对于引入一个未测试的代码库， 这个工具可以快速确定哪些services应该得到更多的关注。</p>
+                                <p>最后， Batarang提供了性能分析。 AngularJS 虽然是高性能开箱即用, 但是随着应用自定义指令和复杂的业务逻辑的增长，有时候会感到页面不够流畅。使用 Batarang 的性能分析工具可以很方便的查看哪些functions 在digest 周期中占用了更多的时间。这个工具还可以显示出整个监控树（full watch tree），当页面有太多的监控器（watch）时，这个功能就显得有用了。</p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q26">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a26" aria-expanded="false" aria-controls="a26">
+                                    AngularJS 太多的$watch 会有什么影响及其解决方案
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q26">
+                            <div class="panel-body">
+                                <p>可能会有很大的性能瓶颈问题，$watch数据量达到2000时会产生严重的页面卡顿现象。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="q27">
+                            <h4 class="panel-title">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a27" aria-expanded="false" aria-controls="a27">
+                                    AngularJS 中的 DOM事件指令有哪些
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="a27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q27">
+                            <div class="panel-body">
+                                <ul class="nav">
+                                    <li>Ng-Bind</li>
+                                    <li>Ng-Repeat</li>
+                                    <li>Ng-Show/Ng-Hide</li>
+                                    <li>Ng-If</li>
+                                    <li>Ng-Bind-Template</li>
+                                    <li>Ng-Class</li>
+                                    <li>Ng-Init</li>
+                                    <li>Ng-Switch</li>
+                                    <li>Ng-Pluralize</li>
+                                    <li>Ng-Non-Bindable</li>
+                                    <li>Ng-Click</li>
+                                    <li>Ng-DoubleClick</li>
+                                    <li>Ng-Keypress</li>
+                                    <li>Ng-Keydown</li>
+                                    <li>Ng-Keyup</li>
+                                    <li>Ng-Mousedown</li>
+                                    <li>Ng-Mouseenter</li>
+                                    <li>Ng-Mouseleave</li>
+                                    <li>Ng-Mousemove</li>
+                                    <li>Ng-Mouseover</li>
+                                    <li>Ng-Mouseup</li>
+                                    <li>Ng-Options</li>
+                                    <li>Ng-Disable</li>
+                                    <li>Ng-Readonly</li>
+                                    <li>Ng-Change</li>
+                                    <li>Ng-Src</li>
+                                    <li>Ng-Bind-Html</li>
+                                    <li>Ng-Model</li>
+                                    <li>Ng-Focus</li>
+                                    <li>Ng-Blur</li>
+                                    <li>Ng-List</li>
+                                    <li>Ng-Open</li>
+                                    <li>Ng-Style</li>
+                                    <li>Ng-Value</li>
+                                    <li>Ng-Form</li>
+                                    <li>Ng-Cut</li>
+                                    <li>Ng-Copy-Ng-Paste</li>
+                                    <li>Ng-Pattern</li>
+                                    <li>Ng-Model-Options</li>
+                                    <li>Ng-Submit</li>
+                                    <li>Ng-Checked</li>
+                                    <li>Ng-App</li>
+                                    <li>Ng-Controller</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3><span class="glyphicon glyphicon-home"></span> 快捷导航</h3>
+            <ul class="nav nav-stacked sidebar-nav">
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 基本指令</a></li>
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 运行原理</a></li>
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 性能优化</a></li>
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 设计思想</a></li>
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 全面方案</a></li>
+                <li><a href="" class="sidebarLink"><span class="glyphicon glyphicon-ok"></span> 模块通信</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

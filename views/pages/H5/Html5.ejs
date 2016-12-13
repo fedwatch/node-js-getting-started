@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 面试必备 - StartBit</title>
+    <% include ../../header.ejs %>
+</head>
+<body>
+<% include ../../nav.ejs %>
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="/public/img/html5.jpg">
+        </a>
+        <h1>HTML5 面试必备</h1>
+        <p>
+            万维网的核心语言、标准通用标记语言下的一个应用超文本标记语言（HTML）的第五次重大修改。
+        </p>
+        <% include ../H5/star.ejs %>
+    </div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-check"></span> HTML5 面试必备</h3>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q1">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#a1" aria-expanded="true" aria-controls="a1">
+                                <code>Canvas</code> 和 <code>SVG图形</code> 之间的区别是什么?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="q1">
+                        <div class="panel-body">
+                            <p>Canvas 通过JavaScript来绘制2D图形。Canvas 是逐像素进行渲染的。</p>
+                            <p>SVG 是一种使用 XML 描述 2D 图形的语言。SVG 是基于形状的保留模式图形系统，更加适合较大的表面或较小数量的对象。</p>
+                            <p>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。</p>
+                            <p>Canvas和SVG在修改方式上还存在着不同。绘制Canvas对象后，不能使用脚本和 CSS 对它进行修改。因为 SVG 对象是文档对象模型的一部分，所以可以随时使用脚本和 CSS 修改它们。</p>
+
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Canvas</th>
+                                        <th>SVG</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>依赖分辨率</td>
+                                        <td>独立于分辨率</td>
+                                    </tr>
+                                    <tr>
+                                        <td>不支持事件处理器</td>
+                                        <td>支持事件处理器</td>
+                                    </tr>
+                                    <tr>
+                                        <td>弱文本渲染能力</td>
+                                        <td>最适合具有大渲染面积的应用（谷歌地图）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>可以保存最终图片为PNG或者JPG</td>
+                                        <td>复杂图像，重画变慢（任何使用DOM很多的情况都会变慢）</td>
+                                    </tr>
+                                    <tr>
+                                        <td>最适合许多对象频繁重画的图形游戏</td>
+                                        <td>不适合游戏应用</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a2" aria-expanded="false" aria-controls="a2">
+                                如何使用 <code>Canvas</code> 和 <code>SVG</code> 绘制矩形?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q2">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q3">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a3" aria-expanded="false" aria-controls="a3">
+                                什么是 <code>CSS选择器</code> ?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q3">
+                        <div class="panel-body">
+                            <ul>
+                                <li>基本选择器</li>
+                                <li>多元素的组合选择器</li>
+                                <li>属性选择器</li>
+                                <li>伪类选择器</li>
+                                <li>伪元素选择器</li>
+                                <li>同级元素通用选择器</li>
+                                <li>属性选择器</li>
+                                <li>结构性伪类</li>
+                                <li>反选伪类</li>
+                                <li>target 伪类</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q4">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a4" aria-expanded="false" aria-controls="a4">
+                                如何使用<code>ID值</code>应用CSS样式?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q4">
+                        <div class="panel-body">
+                            ID 选择器允许以一种独立于文档元素的方式来指定样式
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q5">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a5" aria-expanded="false" aria-controls="a5">
+                                CSS的<code>多列布局</code>有什么用?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q5">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a6" aria-expanded="false" aria-controls="a6">
+                                请解释一下<code>CSS盒子模型</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q6">
+                        <div class="panel-body">
+                            <p>CSS盒模型，又叫CSS盒子模式，由内容(content)、填充(padding)、边框(border)、边界(margin)组成。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a7" aria-expanded="false" aria-controls="a7">
+                                请解释<code>CSS 3</code>中的一些<code>文字效果</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q7">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q8">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a8" aria-expanded="false" aria-controls="a8">
+                                什么是<code>web workers</code>，为什么我们需要他们<code>web workers</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q8">
+                        <div class="panel-body">
+                                Web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q9">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a9" aria-expanded="false" aria-controls="a9">
+                                如何添加和删除 <code>本地存储</code> 中的数据?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q9">
+                        <div class="panel-body">
+                                <p>localStorage 添加 setItem()</p>
+                                <p>localStorage 删除 removeItem()</p>
+                                <p>localStorage 批量删除 clear()</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q10">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a10" aria-expanded="false" aria-controls="a10">
+                                什么是 <code>本地存储的有效期</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q10">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q11">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a11" aria-expanded="false" aria-controls="a11">
+                                <code>本地存储</code>和<code>cookie</code>之间的区别是什么?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q11">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q12">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a12" aria-expanded="false" aria-controls="a12">
+                                <code>会话存储</code>和<code>本地存储</code>之间的区别是什么?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q12">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q13">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a13" aria-expanded="false" aria-controls="a13">
+                                什么是<code>WebSQL</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q13">
+                        <div class="panel-body">
+                            <p>WebSql 又称 Web Sql Database，一套使用异步的（asynchronous） SQL 来操纵客户端数据库（client-side database）的 API。</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q14">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a14" aria-expanded="false" aria-controls="a14">
+                                <code>WebSQL</code>是<code>HTML 5规范</code>的一部分吗?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q14">
+                        <div class="panel-body">
+                                <p>不是</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q15">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a15" aria-expanded="false" aria-controls="a15">
+                                那么我们该如何使用<code>WebSQL</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q15">
+                        <div class="panel-body">
+                            <p><code>openDatabase()</code> 使用现有数据库或新建数据库来创建数据库对象</p>
+                            <p><code>transaction()</code> 允许我们根据情况控制事务提交或回滚</p>
+                            <p><code>executeSql()</code> 执行真实的 SQL 查询</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q16">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a16" aria-expanded="false" aria-controls="a16">
+                                如何用HTML 5实现<code>应用程序缓存</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q16">
+                        <div class="panel-body">
+                            <p>使用 HTML5，通过创建 cache manifest 文件，可以轻松地创建 web 应用的离线版本。</p>
+                            <p>Manifest 文件：</p>
+                            <p><code>CACHE MANIFEST</code> - 在此标题下列出的文件将在首次下载后进行缓存</p>
+                            <p><code>NETWORK</code> - 在此标题下列出的文件需要与服务器的连接，且不会被缓存</p>
+                            <p><code>FALLBACK</code> - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q17">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a17" aria-expanded="false" aria-controls="a17">
+                                <code>应用程序缓存</code>的<code>回退页面</code>是什么?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q17">
+                        <div class="panel-body">
+                                FALLBACK（回退） - 在此标题下列出的文件规定当页面无法访问时的回退页面
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q18">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a18" aria-expanded="false" aria-controls="a18">
+                                什么是<code>HTML 5</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q18">
+                        <div class="panel-body">
+                            <p>万维网的核心语言、标准通用标记语言下的一个应用超文本标记语言（HTML）的第五次重大修改。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q19">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a19" aria-expanded="false" aria-controls="a19">
+                                哪些<code>浏览器</code>支持<code>HTML 5</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q19">
+                        <div class="panel-body">
+                                <p>Firefox、IE9、Chrome、Safari、Opera、360浏览器、QQ浏览器、猎豹浏览器</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q20">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a20" aria-expanded="false" aria-controls="a20">
+                                <code>HTML 5</code>的页面结构和HTML 4或早先的HTML有什么不同?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q20">
+                        <div class="panel-body">
+                            <ul class="nav">
+                                <li>HTML5标准还在制定中</li>
+                                <li>简化的语法</li>
+                                <li>一个替代Flash的新 canvas 标记</li>
+                                <li>新的 header 和 footer 标记</li>
+                                <li>新的 section 和 article 标记</li>
+                                <li>新的 menu 和 figure 标记</li>
+                                <li>新的 audio 和 video 标记</li>
+                                <li>全新的表单设计</li>
+                                <li>不再使用 b 和 font 标记</li>
+                                <li>不再使用 frame, center, big 标记</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q21">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a21" aria-expanded="false" aria-controls="a21">
+                                HTML5 中如何嵌入<code>音频</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q21">
+                        <div class="panel-body">
+                            使用 <code>audio</code> 标签嵌入到HTML文档中
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q22">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a22" aria-expanded="false" aria-controls="a22">
+                                HTML5 中如何嵌入<code>视频</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q22">
+                        <div class="panel-body">
+                                使用 <code>video</code> 标签嵌入到HTML文档中
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q23">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a23" aria-expanded="false" aria-controls="a23">
+                                除了 audio 和 video，HTML5 还有哪些<code>媒体标签</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q23">
+                        <div class="panel-body">
+                            <p><code>source</code> 标记定义媒体资源</p>
+                            <p><code>canvas</code> 标记定义画布</p>
+                            <p><code>embed</code> 标记定义外部的可交互的内容或插件</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q24">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a24" aria-expanded="false" aria-controls="a24">
+                                HTML5 <code>废弃</code>了哪些 HTML4 标签？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q24">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q25">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a25" aria-expanded="false" aria-controls="a25">
+                                HTML5 标准提供了哪些<code>新的 API</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q25">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q26">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a26" aria-expanded="false" aria-controls="a26">
+                                HTML5 <code>应用程序缓存</code>和<code>浏览器缓存</code>有什么区别？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q26">
+                        <div class="panel-body">
+                            <p><code>应用程序缓存</code>是 HTML5 的重要特性之一，提供了离线使用的功能，让应用程序可以获取本地的网站内容，例如 HTML、CSS、图片以及 JavaScript。</p>
+                            <p>这个特性可以提高网站性能，它的实现借助于 manifest 文件。使用 <code>manifest</code> 与传统<code>浏览器缓存</code>相比，它不强制用户访问的网站内容被缓存。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q27">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a27" aria-expanded="false" aria-controls="a27">
+                                <code>SGML</code>、<code>HTML</code>、<code>XML</code>和<code>XHTML</code>之间的关系?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q27">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q28">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a28" aria-expanded="false" aria-controls="a28">
+                                如果我不输入，HTML 5能工作吗?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q28">
+                        <div class="panel-body">
+                                <p>No，浏览器将无法识别HTML文件，并且HTML 5标签将无法正常工作。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q29">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a29" aria-expanded="false" aria-controls="a29">
+                                什么是<code>WebSocket</code>?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q29">
+                        <div class="panel-body">
+                            WebSocket protocol 是HTML5一种新的协议。它实现了浏览器与服务器全双工通信(full-duplex)。一开始的握手需要借助HTTP请求完成。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q30">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a30" aria-expanded="false" aria-controls="a30">
+                                <code>doctype(文档类型)</code> 的作用是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q30">
+                        <div class="panel-body">
+                            doctype声明指出阅读程序应该用什么规则集来解释文档中的标记。在Web文档的情况下，“阅读程序”通常是浏览器或者校验器这样的一个程序，“规则”则是W3C所发布的一个文档类型定义（DTD）中包含的规则。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q31">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a31" aria-expanded="false" aria-controls="a31">
+                                浏览器<code>标准模式 (standards mode)</code> 、<code>几乎标准模式（almost standards mode）</code>和<code>怪异模式 (quirks mode)</code> 之间的区别是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q31">
+                        <div class="panel-body">
+                            Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页
+                            Almost Standards （近似标准）模式，用于支持为标准的某个老版本而设计的网页
+                            Quirks （包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q32">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a32" aria-expanded="false" aria-controls="a32">
+                                <code>HTML</code> 和 <code>XHTML</code> 有什么区别？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q32">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q33">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a33" aria-expanded="false" aria-controls="a33">
+                                如果页面使用 <code>'application/xhtml+xml'</code> 会有什么问题吗？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q33">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q34">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a34" aria-expanded="false" aria-controls="a34">
+                                如果网页内容需要<code>支持多语言</code>，你会怎么做？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a34" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q34">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q35">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a35" aria-expanded="false" aria-controls="a35">
+                                在设计和开发多语言网站时，有哪些问题你必须要考虑？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a35" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q35">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q36">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a36" aria-expanded="false" aria-controls="a36">
+                                使用 <code>data- 属性</code>的好处是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a36" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q36">
+                        <div class="panel-body">
+                            <p>自定义属性，用来将一些数据绑定到html标签上，在js中好取出来做进一步的逻辑操作。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q37">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a37" aria-expanded="false" aria-controls="a37">
+                                如果把 HTML5 看作做一个开放平台，那它的<code>构建模块</code>有哪些？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a37" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q37">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q38">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a38" aria-expanded="false" aria-controls="a38">
+                                请解释<code> &lt;script&gt;</code>、<code>&lt;script async&gt;</code> 和 <code>&lt;script defer&gt;</code> 的区别。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a38" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q38">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q39">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a39" aria-expanded="false" aria-controls="a39">
+                                什么是<code>渐进式渲染 (progressive rendering)</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a39" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q39">
+                        <div class="panel-body">
+                            <img src="/public/img/progressive-render.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q40">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a40" aria-expanded="false" aria-controls="a40">
+                                你用过哪些不同的 <code>HTML 模板语言</code>？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a40" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q40">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+        </div>
+    </div> <!-- row -->
+</div>
+
+
+</body>
+</html>

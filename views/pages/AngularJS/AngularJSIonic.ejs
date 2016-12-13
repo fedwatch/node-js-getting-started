@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ionic 面试必备 - StartBit</title>
+    <% include ../../header.ejs %>
+</head>
+<body>
+<% include ../../nav.ejs %>
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="/public/img/ionic.jpg">
+        </a>
+        <h1>Ionic 移动框架</h1>
+        <p>Ionic framework是一种基于AngularJS接近原生的Html5创建和开发移动应用程序的框架。</p>
+        <% include ../AngularJS/star.ejs %>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-check"></span> Ionic 面试必备</h3>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q1">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#a1" aria-expanded="true" aria-controls="a1">
+                                如何在某个界面中去掉导航栏(nav-bar)?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="q1">
+                        <div class="panel-body">
+                            如果某个界面上不想要导航栏，可以简单地在最顶端的标签中添加hide-nav-bar="true"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a2" aria-expanded="false" aria-controls="a2">
+                                如何在ionic中加载本地图片?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q2">
+                        <div class="panel-body">
+                            对于css文件夹中的样式文件中如果要调用本地的图片的话,从该css文件所在的文件夹开始算,例如www/css/style.css要加../,否则在浏览器中可以正常显示，在设备上不行。
+                            但是对于在页面中定义的图片路径，从www路径开始算,否则浏览器中可显示，但设备上不行,img文件夹和index.html在一级,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q3">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a3" aria-expanded="false" aria-controls="a3">
+                                如何在ionic中嵌入网页代码?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q3">
+                        <div class="panel-body">
+                            使用ng-bind-html这个类,不过它会过滤原始html的标签，我们可以引入$sce模块，用$sce.trustAsHtml()方法信任我们获取的网页
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q4">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a4" aria-expanded="false" aria-controls="a4">
+                                如何将template加载到某个tab或某个sidemenu项目下?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q4">
+                        <div class="panel-body">
+                            ion-nav-view name="menuContent" 可以指定name，然后在子状态中使用该name，ionic就知道该把该状态的template渲染到哪边了
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q5">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a5" aria-expanded="false" aria-controls="a5">
+                                运行serve命令时ionic报错?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q5">
+                        <div class="panel-body">
+                            可能会出现：<kbd>ionic $ An uncaught exception occured and has been reported to Ionic</kbd> 是由于终端在运行多个serve导致的。
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a6" aria-expanded="false" aria-controls="a6">
+                                用docker跑ionic的时候，不能把地址绑定到0.0.0.0怎么处理?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q6">
+                        <div class="panel-body">
+                            可以用 <kbd>ionic serve -all</kbd> 的方法解决
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a7" aria-expanded="false" aria-controls="a7">
+                                加载页面的时候会看到双括号一闪而过？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q7">
+                        <div class="panel-body">
+                            angularjs 在使用双括号的时候，第一个加载的页面，也就是应用中的index.html,其未被渲染好的模版可能会被用户看到。用ng-bind就不会遇到这个问题。造成这种现象的原因是，浏览器需要首先加载HTML页面，渲染它，然后Angular才有机会把它解释成你期望看到的内容。不过好消息是，在大多数的模版中你依然可以使用双括号.但是对于index.html页面中的数据绑定操作，建议使用ng-bind。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q8">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a8" aria-expanded="false" aria-controls="a8">
+                                更新了数据，如何让视图更新呢？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q8">
+                        <div class="panel-body">
+                            可以用广播，注意$broadcast 和 $emit的区别
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q9">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a9" aria-expanded="false" aria-controls="a9">
+                                如何实现IonicView中card上面有一列分割线的效果?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q9">
+                        <div class="panel-body">
+                            使用对应css代码编写#info-up
+                            #info-up {
+                                border-top: 4px solid #f06336;
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q10">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a10" aria-expanded="false" aria-controls="a10">
+                                controller.js和service.js文件越来越大怎么办?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q10">
+                        <div class="panel-body">
+                                进行代码的模块化开发管理
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q11">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a11" aria-expanded="false" aria-controls="a11">
+                                如何寻找优秀的范例代码?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q11">
+                        <div class="panel-body">
+                            目前有些ionic 的app没有进行代码混淆，至少ionic官方的ionic view没有进行代码混淆，下载他们的app，文件名改成zip，解压，所有的 www文件都在assets文件夹中，相当于开源了有木有，看看那些最优秀的practice。看中哪些优秀的app，下下来,如何在googleplay上下载？把googleplay应用的地址贴到apps.evozi中。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q12">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a12" aria-expanded="false" aria-controls="a12">
+                                如何显示相对时间？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q12">
+                        <div class="panel-body">
+                            可以尝试使用MomentJS
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q13">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a13" aria-expanded="false" aria-controls="a13">
+                                发布应用的时候如果遇到翻译错误即MissingTranslation怎么办?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q13">
+                        <div class="panel-body">
+                            不进行翻译校正, 在 /platforms/android/build.gradle 中的android {}节中加入
+                            lintOptions {
+                                disable 'MissingTranslation'
+                                disable 'ExtraTranslation'
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q14">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a14" aria-expanded="false" aria-controls="a14">
+                                如何在列表右下方添加时间等信息?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q14">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q15">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a15" aria-expanded="false" aria-controls="a15">
+                                如何回到上一页面
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q15">
+                        <div class="panel-body">
+                            用$ionicHistory这个模块,引入该模块后使用goBack([backCount])，backCount指定回去多少个页面（-1代表回去一个页面），默认为-1
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q16">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a16" aria-expanded="false" aria-controls="a16">
+                                如何关闭应用?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q16">
+                        <div class="panel-body">
+                            ionic.Platform.exitApp();
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q17">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a17" aria-expanded="false" aria-controls="a17">
+                                在安卓设备上如何让headerbar中的标题居中
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q17">
+                        <div class="panel-body">
+                            在headerbar中添加align-title="center"：
+
+                            <script async src="//jsfiddle.net/Lamn6uqw/embed/"></script>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q18">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a18" aria-expanded="false" aria-controls="a18">
+                                对于需要添加数据的list，在添加数据后页面不能及时刷新造成卡顿怎么办?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q18">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q19">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a19" aria-expanded="false" aria-controls="a19">
+                                ionic如何处理回退按钮？例如询问用户是否真的要退出应用
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q19">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q20">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a20" aria-expanded="false" aria-controls="a20">
+                                ionic如何实现对每个请求都添加认证信息或认证失败自动重新登录?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q20">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q21">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a21" aria-expanded="false" aria-controls="a21">
+                                ionic如何实现搜索框内的全部清除按钮?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q21">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q22">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a22" aria-expanded="false" aria-controls="a22">
+                                img 中 base64编码的图片无法显示？在源码中发现angular添加了unsafe标签？需要在白名单中添加data:image
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q22">
+                        <div class="panel-body">
+
+                            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|content|file|assets-library):|data:image\//);
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q23">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a23" aria-expanded="false" aria-controls="a23">
+                                ios设备上运行ionic
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q23">
+                        <div class="panel-body">
+                            ionic run ios --device
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q24">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a24" aria-expanded="false" aria-controls="a24">
+                                Ionic components & services
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q24">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q25">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a25" aria-expanded="false" aria-controls="a25">
+                                添加 Ionic 的页面导航组件
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q25">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q26">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a26" aria-expanded="false" aria-controls="a26">
+                                添加标签页 state
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q26">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q27">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a27" aria-expanded="false" aria-controls="a27">
+
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q27">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+        </div>
+    </div> <!-- row -->
+</div>
+
+
+</body>
+</html>

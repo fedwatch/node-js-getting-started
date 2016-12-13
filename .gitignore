@@ -10,3 +10,5 @@ npm-debug.log
 # Docker
 Dockerfile
 docker-compose.yml
+/node-js-getting-started.iml
+/.idea/

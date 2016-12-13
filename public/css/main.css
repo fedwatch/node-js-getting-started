@@ -1,0 +1,96 @@
+html,body{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: '微软雅黑', 黑体;
+}
+.jumbotron {
+    background: #1979FF;
+    color: white;
+    padding-bottom: 80px;
+}
+
+.jumbotron .btn-primary {
+    background: #C8FF00;
+    color: #000000;;
+    border-color: #C8FF00;
+}
+
+.jumbotron .btn-primary:hover {
+    background: #B2E300;
+}
+
+.jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em;
+}
+
+.navbar + .jumbotron {
+    margin-top: -20px;
+}
+
+.jumbotron .lang-logo {
+    display: block;
+    /*background: #B01302;*/
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid white;
+}
+.jumbotron .cube-logo {
+    display: block;
+    /*background: #B01302;*/
+    /*border-radius: 50%;*/
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 3px solid white;
+}
+
+.jumbotron .lang-logo img {
+    max-width: 100%;
+}
+.jumbotron .cube-logo img {
+    max-width: 100%;
+}
+.qNum{
+    padding:0 10px 0 0;
+    color:#1979FF;
+    /*color:#f04;*/
+
+}
+.qNum::before{
+    content:"【"
+}
+.qNum::after{
+    content:"】"
+}
+.sidebarLink{
+    color:#00b3ee;
+}
+
+
+
+.skillContent{ }
+.skillContent .skillContentTitle{}
+.skillContent .skillContentTitle p {  margin: 1em 0;max-width: 100%;}
+.skillContent .skillContentTitle p span{font-size:16px;color:#fff;line-height: 15px;}
+.skillContent .skillContentStar{}
+.skillContent .skillContentStar p{ margin: 1em 0;max-width: 100%;}
+.skillContent .skillContentStar p i{color:#ffff00;}
+::selection{
+    background:#00b3ee;
+    color:#fff;
+}
+/*::selection::before{*/
+    /*content:"{";*/
+    /*padding-left:20px;*/
+/*}*/
+/*::selection::after{*/
+    /*content:"}";*/
+    /*padding-right:20px;*/
+/*}*/

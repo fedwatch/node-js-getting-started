@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript 面试必备 - StartBit</title>
+    <% include ../../header.ejs %>
+</head>
+<body>
+<% include ../../nav.ejs %>
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="/public/img/icon.ico">
+        </a>
+
+        <h1>Javascript 面试必备</h1>
+        <p>
+            AngularJS 诞生于2009年，由<code>Misko Hevery</code>等人创建，后为 <code>Google</code> 所收购，一款优秀的 <code>MVVM</code> 框架，已经被用于Google的多款产品当中。
+        </p>
+        <p>
+            AngularJS有着诸多特性，最为核心的是：MVC、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。
+        </p>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h3><span class="glyphicon glyphicon-check"></span> Javascript 面试必备</h3>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q1">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#a1" aria-expanded="true" aria-controls="a1">
+                                请解释事件代理 (event delegation)。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="q1">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q2">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a2" aria-expanded="false" aria-controls="a2">
+                                请解释 JavaScript 中 this 是如何工作的。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q2">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q3">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a3" aria-expanded="false" aria-controls="a3">
+                                请解释原型继承 (prototypal inheritance) 的原理。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q3">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q4">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a4" aria-expanded="false" aria-controls="a4">
+                                你怎么看 AMD vs. CommonJS？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q4">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q5">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a5" aria-expanded="false" aria-controls="a5">
+                                请解释为什么接下来这段代码不是 IIFE (立即调用的函数表达式)：function foo(){ }();.要做哪些改动使它变成 IIFE?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q5">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q6">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a6" aria-expanded="false" aria-controls="a6">
+                                描述以下变量的区别：null，undefined 或 undeclared？该如何检测它们？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q6">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q7">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a7" aria-expanded="false" aria-controls="a7">
+                                什么是闭包 (closure)，如何使用它，为什么要使用它？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q7">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q8">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a8" aria-expanded="false" aria-controls="a8">
+                                请举出一个匿名函数的典型用例？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q8">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q9">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a9" aria-expanded="false" aria-controls="a9">
+                                你是如何组织自己的代码？是使用模块模式，还是使用经典继承的方法？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a9" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q9">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q10">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a10" aria-expanded="false" aria-controls="a10">
+                                请指出 JavaScript 宿主对象 (host objects) 和原生对象 (native objects) 的区别？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a10" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q10">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q11">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a11" aria-expanded="false" aria-controls="a11">
+                                请指出以下代码的区别：function Person(){}、var person = Person()、var person = new Person()？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q11">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q12">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a12" aria-expanded="false" aria-controls="a12">
+                                .call 和 .apply 的区别是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q12">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q13">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a13" aria-expanded="false" aria-controls="a13">
+                                请解释 Function.prototype.bind？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q13">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q14">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a14" aria-expanded="false" aria-controls="a14">
+                                在什么时候你会使用 document.write()？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q14">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q15">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a15" aria-expanded="false" aria-controls="a15">
+                                请指出浏览器特性检测，特性推断和浏览器 UA 字符串嗅探的区别？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q15">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q16">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a16" aria-expanded="false" aria-controls="a16">
+                                请尽可能详尽的解释 Ajax 的工作原理。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q16">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q17">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a17" aria-expanded="false" aria-controls="a17">
+                                使用 Ajax 都有哪些优劣？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q17">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q18">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a18" aria-expanded="false" aria-controls="a18">
+                                请解释 JSONP 的工作原理，以及它为什么不是真正的 Ajax。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a18" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q18">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q19">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a19" aria-expanded="false" aria-controls="a19">
+                                你使用过 JavaScript 模板系统吗？如有使用过，请谈谈你都使用过哪些库？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a19" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q19">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q20">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a20" aria-expanded="false" aria-controls="a20">
+                                请解释变量声明提升 (hoisting)。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a20" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q20">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q21">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a21" aria-expanded="false" aria-controls="a21">
+                                请描述事件冒泡机制 (event bubbling)。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a21" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q21">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q22">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a22" aria-expanded="false" aria-controls="a22">
+                                "attribute" 和 "property" 的区别是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q22">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q23">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a23" aria-expanded="false" aria-controls="a23">
+                                为什么扩展 JavaScript 内置对象不是好的做法？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q23">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q24">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a24" aria-expanded="false" aria-controls="a24">
+                                请指出 document load 和 document DOMContentLoaded 两个事件的区别。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q24">
+                        <div class="panel-body">
+                            == 和 === 有什么不同？
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q25">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a25" aria-expanded="false" aria-controls="a25">
+                                请解释 JavaScript 的同源策略 (same-origin policy)。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q25">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q26">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a26" aria-expanded="false" aria-controls="a26">
+                                什么是三元表达式 (Ternary expression)？“三元 (Ternary)” 表示什么意思？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a26" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q26">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q27">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a27" aria-expanded="false" aria-controls="a27">
+                                什么是 "use strict"; ? 使用它的好处和坏处分别是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a27" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q27">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q28">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a28" aria-expanded="false" aria-controls="a28">
+                                为何通常会认为保留网站现有的全局作用域 (global scope) 不去改变它，是较好的选择？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a28" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q28">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q29">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a29" aria-expanded="false" aria-controls="a29">
+                                为何你会使用 load 之类的事件 (event)？此事件有缺点吗？你是否知道其他替代品，以及为何使用它们？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a29" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q29">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q30">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a30" aria-expanded="false" aria-controls="a30">
+                                请解释什么是单页应用 (single page app), 以及如何使其对搜索引擎友好 (SEO-friendly)。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a30" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q30">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q31">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a31" aria-expanded="false" aria-controls="a31">
+                                简述一下什么是Promises 和 polyfills ?
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a31" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q31">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q32">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a32" aria-expanded="false" aria-controls="a32">
+                                使用 Promises 而非回调 (callbacks) 优缺点是什么？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a32" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q32">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q33">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a33" aria-expanded="false" aria-controls="a33">
+                                使用一种可以编译成 JavaScript 的语言来写 JavaScript 代码有哪些优缺点？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q33">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q34">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a34" aria-expanded="false" aria-controls="a34">
+                                你使用哪些工具和技术来调试 JavaScript 代码？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a34" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q34">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q35">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a35" aria-expanded="false" aria-controls="a35">
+                                你会使用怎样的语言结构来遍历对象属性 (object properties) 和数组内容？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a35" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q35">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q36">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a36" aria-expanded="false" aria-controls="a36">
+                                请解释可变 (mutable) 和不变 (immutable) 对象的区别。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a36" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q36">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q37">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a37" aria-expanded="false" aria-controls="a37">
+                                请解释同步 (synchronous) 和异步 (asynchronous) 函数的区别。
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a37" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q37">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q38">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a38" aria-expanded="false" aria-controls="a38">
+                                什么是事件循环 (event loop)？
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a38" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q38">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="q39">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#a39" aria-expanded="false" aria-controls="a39">
+                                解释 function foo() {} 与 var foo = function() {} 用法的区别
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="a39" class="panel-collapse collapse" role="tabpanel" aria-labelledby="q39">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+        </div>
+    </div> <!-- row -->
+</div>
+
+
+</body>
+</html>

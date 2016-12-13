@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"],
+  "name": "startBit",
+  "description": "easy loans start a bit of money",
+  "repository": "https://github.com/fedwatch/node-js-getting-started",
+  "logo": "http://node-js-sample.herokuapp.com/img/logo.png",
+  "keywords": ["node", "express", "startbit"],
   "image": "heroku/nodejs"
 }
