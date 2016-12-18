@@ -6,3 +6,31 @@
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!--<script src="/public/js/app.js"></script>-->
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCjqqXbZlCPgn3wdG4xWSum79U7yLhmStc",
+        authDomain: "slrig-4ee0f.firebaseapp.com",
+        databaseURL: "https://slrig-4ee0f.firebaseio.com",
+        storageBucket: "slrig-4ee0f.appspot.com",
+        messagingSenderId: "584454766760"
+    };
+    var base = firebase.initializeApp(config);
+    const messaging = firebase.messaging();
+    messaging.requestPermission()
+            .then(function(){
+                console.log("Have permission!")
+            }).catch(function(e){
+                console.log("error:"+e);
+            })
+
+    base.database().ref("Root").set("Hello");
+</script>
