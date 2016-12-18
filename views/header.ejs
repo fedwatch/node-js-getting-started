@@ -32,5 +32,9 @@
                 console.log("error:"+e);
             })
 
-    base.database().ref("Root").set("Hello");
+//    base.database().ref("root");
+    var root = base.database().ref("long");
+    root.on('value',function(snapshot){
+        $("#lookOnHere").val(snapshot.val());
+    })
 </script>
