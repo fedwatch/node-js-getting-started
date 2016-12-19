@@ -1,0 +1,10 @@
+{
+    "to":"asnfodnasofnasofnsaofndsaofnsaodno",
+    "notification":{
+        "title":"Hello",
+        "body":"World",
+        "icon":"/firebase-logo.png",
+    }
+}
+
+curl --header "Authorization: key=sadnfosanfoasdfobwobouanwuasbuyae"

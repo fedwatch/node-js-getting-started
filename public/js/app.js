@@ -24,3 +24,6 @@ messaging.requestPermission()
     }).catch(function(e){
         console.log("error:"+e);
     })
+messaging.onMessage(function(payload){
+    console.log("onMessage: ",payload );
+});
