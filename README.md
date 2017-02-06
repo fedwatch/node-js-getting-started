@@ -5,12 +5,23 @@ StartBit，前端价值面试指南(Front end value interview guide)是由沪上
   
 # 招聘方向
 使用本指南可以为您的企业招聘到以下前端技术人才：
+
   &check; H5开发工程师
+  
   &check; H5高级开发工程师
+  
   &check; Angular开发工程师
+  
   &check; Angular高级开发工程师
+  
   &check; React开发工程师
+  
   &check; React高级开发工程师
+  
   &check; H5移动端开发工程师
+  
   &check; PC端前端开发工程师
+  
   &check; React Native开发工程师  
+
+  &check; Angular Ionic开发工程师  
